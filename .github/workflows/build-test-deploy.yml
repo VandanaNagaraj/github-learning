@@ -34,13 +34,13 @@ jobs:
         pages: write
         id-token: write
 
-      environment:
+    environment:
         name: production
         url: ${{ steps.deployment.outputs.page_url }}
 
-      runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-      steps:
+    steps:
         - name: checkout repo
           uses: actions/checkout@v4
           with:
